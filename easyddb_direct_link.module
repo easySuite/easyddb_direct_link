@@ -1,0 +1,130 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function easyddb_direct_link_init() {
+  $replace = easyddb_direct_link_prepare_replacements();
+  if (empty($replace)) {
+    return;
+  }
+
+  $subdomains = implode('|', array_keys($replace));
+
+  global $base_url;
+  global $user;
+  $url = parse_url($base_url);
+
+  if (preg_match('/^(https?:\/\/)?(' . $subdomains . ')\.(.*\.[a-z]{2,})(.*)/', $base_url, $matches)) {
+    if ($user->uid) {
+      $target = $matches[1] . str_replace($matches[2] . '.', '', $url['host']) . '/' . $replace[$matches[2]];
+      drupal_goto($target);
+    }
+    else {
+      $target = $matches[1] . $matches[3] . '/ding_frontpage?destination=easyddb/direct/' . $matches[2];
+      drupal_goto($target, array(
+        'fragment' => 'login',
+      ));
+    }
+  }
+}
+
+/**
+ * Create a mapping of subdomains to uri redirects from
+ * saved settings in backend.
+ *
+ * @return array
+ *   Mapping information.
+ */
+function easyddb_direct_link_prepare_replacements() {
+  $conf = variable_get('links_rows', array());
+  if (empty($conf)) {
+    return array();
+  }
+
+  global $user;
+
+  $replace = array();
+  array_walk($conf, function($v) use(&$replace, $user) {
+    if ($v['link_enabled']) {
+      $replace[$v['link_path']] = 'user/' . $user->uid . '/' . $v['link_target'];
+    }
+  });
+
+  return $replace;
+}
+
+/**
+ * Implements hook_init().
+ */
+function easyddb_direct_link_menu() {
+  $menu = array();
+
+  $menu['admin/config/people/easyddb_direct'] = array(
+    'title' => 'easyDDB direct links',
+    'description' => 'Configure direct links to user pages.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('easyddb_direct_link_admin_form'),
+    'access arguments' => array('administer easyddb direct'),
+    'file' => 'easyddb_direct_link.admin.inc',
+  );
+
+  $menu['easyddb/direct/%'] = array(
+    'title' => 'Redirect user to specific page',
+    'page callback' => 'easyddb_direct_link_redirect',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $menu;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function easyddb_direct_link_permission() {
+  $perm = array();
+
+  $perm['administer easyddb direct'] = array(
+    'title' => t('Administer easyDDB user links settings.'),
+    'desription' => t('Allow roles to manipulate redirection rules.'),
+  );
+
+  return $perm;
+}
+
+/**
+ * Redirect the page depending on the situation.
+ *
+ * @param string $action
+ *   Subdomain name, mapped to a certain redirect uri.
+ */
+function easyddb_direct_link_redirect($action) {
+  global $base_url;
+  global $user;
+  $url = parse_url($base_url);
+
+  $replacements = easyddb_direct_link_prepare_replacements();
+
+  if (empty($replacements)) {
+    drupal_goto('/');
+  }
+  else {
+    $target = $url['scheme'] . '://' . str_replace($action . '.', '', $url['host']) . '/' . $replacements[$action];
+    drupal_goto($target);
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function easyddb_direct_link_theme($existing, $type, $theme, $path) {
+  $hooks = array();
+
+  $hooks['easyddb_direct_link_admin_form'] = array(
+    'render element' => 'form',
+  );
+
+  return $hooks;
+}

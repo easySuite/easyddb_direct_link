@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Install/uninstall routine for easyDDB direct link module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function easyddb_direct_link_install() {
+  variable_set('links_rows', array(
+    array(
+      'link_enabled' => '1',
+      'link_path' => 'status',
+      'link_target' => 'status',
+    ),
+    array(
+      'link_enabled' => '1',
+      'link_path' => 'pay',
+      'link_target' => 'status/debts',
+    ),
+    array(
+      'link_enabled' => '1',
+      'link_path' => 'renew',
+      'link_target' => 'status/loans',
+    ),
+  ));
+}
+
+/**
+ * Implemend hook_uninstall().
+ */
+function easyddb_direct_link_uninstall() {
+  variable_del('links_rows');
+}

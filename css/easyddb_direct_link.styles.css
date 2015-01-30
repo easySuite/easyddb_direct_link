@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Specific layout styles for easyDDB direct link.
+ */
+#easyddb-direct-links td .form-item-prefix,
+#easyddb-direct-links td .form-item-suffix,
+#easyddb-direct-links td .form-item {
+	float: left;
+}

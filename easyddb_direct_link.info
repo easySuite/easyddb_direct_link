@@ -1,0 +1,6 @@
+name = EasyDDB Direct Link
+description = Redirect user to his profile pages.
+core = 7.x
+version = 7.x-0.1
+package = easyDDB
+configure = admin/config/people/easyddb/direct
