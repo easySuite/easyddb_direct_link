@@ -55,7 +55,7 @@ function easyddb_direct_link_prepare_replacements() {
 }
 
 /**
- * Implements hook_init().
+ * Implements hook_menu().
  */
 function easyddb_direct_link_menu() {
   $menu = array();
