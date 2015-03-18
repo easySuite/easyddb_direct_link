@@ -12,6 +12,6 @@ This setting will cover any sub-domain derived from "some-domain.com" name.
 
 ### Module configuration
 
-Most straight-forward part. Go to "admin/config/people/easyddb_direct".
+Most straight-forward part. Go to ```admin/config/people/easyddb_direct```.
 Assign correct settings and save. Default values, when enabling the module,
 point to some default user pages in the system.

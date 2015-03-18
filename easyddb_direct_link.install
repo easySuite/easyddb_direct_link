@@ -28,7 +28,7 @@ function easyddb_direct_link_install() {
 }
 
 /**
- * Implemend hook_uninstall().
+ * Implements hook_uninstall().
  */
 function easyddb_direct_link_uninstall() {
   variable_del('links_rows');
