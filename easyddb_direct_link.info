@@ -4,3 +4,6 @@ core = 7.x
 version = 7.x-2.0.0+easy
 package = easyDDB
 configure = admin/config/people/easyddb/direct
+dependencies[] = features
+features[features_api][] = api:2
+features[user_permission][] = administer easyddb direct
