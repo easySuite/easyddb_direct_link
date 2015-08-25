@@ -10,69 +10,70 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2015-02-19 16:15+0100\n"
-"PO-Revision-Date: 2015-02-20 16:15+0100\n"
+"POT-Creation-Date: 2015-07-28 11:34+0300\n"
+"PO-Revision-Date: 2015-07-30 16:24+0100\n"
 "Last-Translator: Martin Cording <mc@inlead.dk>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Language: da\n"
 "X-Generator: Poedit 1.7.4\n"
 
-#: easyddb_direct_link.admin.inc:32
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.admin.inc:32
 msgid "Add new row"
 msgstr "Tilføj en ny række"
 
-#: easyddb_direct_link.admin.inc:44
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.admin.inc:44
 msgid "Save configuration"
 msgstr "Gem konfiguration"
 
-#: easyddb_direct_link.admin.inc:83
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.admin.inc:83
 msgid "Configuration options saved."
 msgstr "Konfigurationen er gemt."
 
-#: easyddb_direct_link.admin.inc:145
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.admin.inc:145
 msgid "Enabled"
 msgstr "Aktiveret"
 
-#: easyddb_direct_link.admin.inc:146
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.admin.inc:146
 msgid "Sub-domain"
 msgstr "Sub-domæne"
 
-#: easyddb_direct_link.admin.inc:147
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.admin.inc:147
 msgid "Redirect to"
 msgstr "Redeleger til"
 
-#: easyddb_direct_link.module:90
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:90
 msgid "Administer easyDDB user links settings."
 msgstr "Administrer domæne-redelegeringer"
 
-#: easyddb_direct_link.module:91
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:91
 msgid "Allow roles to manipulate redirection rules."
 msgstr "Tillad roller at ændre på domæne-redelegeringerne."
 
-#: easyddb_direct_link.module:64
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:64
 msgid "easyDDB direct links"
 msgstr "Domæne-redelegeringer"
 
-#: easyddb_direct_link.module:65
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:65
 msgid "Configure direct links to user pages."
 msgstr "Konfigurer domæne-redelegeringer til brugersiderne."
 
-#: easyddb_direct_link.module:73
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:73
 msgid "Redirect user to specific page"
 msgstr "Redelegeringer bruger til en specifik side"
 
-#: easyddb_direct_link.info:0
-msgid "EasyDDB Direct Link"
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
+#, fuzzy
+msgid "easyDDB Direct Link"
 msgstr "Domæne-redelegeringer"
 
-#: easyddb_direct_link.info:0
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
 msgid "Redirect user to his profile pages."
 msgstr "Redelegeringer brugere til brugersider vha. domæner."
 
-#: easyddb_direct_link.info:0
+#: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
 msgid "easyDDB"
 msgstr ""
