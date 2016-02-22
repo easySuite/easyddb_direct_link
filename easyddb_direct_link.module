@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Redirect user related sub-domain pages to their appropriate paths.
+ */
 
 /**
  * Implements hook_init().
@@ -21,10 +25,26 @@ function easyddb_direct_link_init() {
       drupal_goto($target);
     }
     else {
-      $target = $matches[1] . $matches[3] . '/ding_frontpage?destination=easyddb/direct/' . $matches[2];
+      $target = $matches[1] . $matches[3] . '?user_redirect=1&target=' . $matches[2];
       drupal_goto($target, array(
         'fragment' => 'login',
       ));
+    }
+  }
+}
+
+/**
+ * Implement hook_form_alter().
+ *
+ * Alter the login form to replace the destination submit path.
+ */
+function easyddb_direct_link_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_login_block') {
+    $user_redirect = isset($_GET['user_redirect']) && (int) $_GET['user_redirect'] == 1;
+    $target = (isset($_GET['target']) && !empty($_GET['target'])) ? check_plain($_GET['target']) : NULL ;
+
+    if ($user_redirect && $target) {
+      $form['#action'] = '/ding_frontpage?destination=easyddb/direct/' . $target;
     }
   }
 }
