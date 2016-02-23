@@ -1,7 +1,7 @@
 name = easyDDB Direct Link
 description = Redirect user to his profile pages.
 core = 7.x
-version = 7.x-2.2.0+easy
+version = 7.x-2.4.4+easy
 package = easyDDB
 configure = admin/config/people/easyddb/direct
 dependencies[] = features
