@@ -45,7 +45,7 @@ msgid "Redirect to"
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:90
-msgid "Administer easyDDB user links settings."
+msgid "Administer easyOPAC user links settings."
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:91
@@ -53,7 +53,7 @@ msgid "Allow roles to manipulate redirection rules."
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:64
-msgid "easyDDB direct links"
+msgid "easyOPAC direct links"
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:65
@@ -65,7 +65,7 @@ msgid "Redirect user to specific page"
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
-msgid "easyDDB Direct Link"
+msgid "easyOPAC Direct Link"
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
@@ -73,6 +73,6 @@ msgid "Redirect user to his profile pages."
 msgstr ""
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
-msgid "easyDDB"
+msgid "easyOPAC"
 msgstr ""
 
