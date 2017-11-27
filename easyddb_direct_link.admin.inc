@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * easyDDB direct link admin interface.
+ * easyOPAC direct link admin interface.
  */
 
 /**

@@ -46,7 +46,7 @@ msgid "Redirect to"
 msgstr "Redeleger til"
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:90
-msgid "Administer easyDDB user links settings."
+msgid "Administer easyOPAC user links settings."
 msgstr "Administrer domæne-redelegeringer"
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:91
@@ -54,7 +54,7 @@ msgid "Allow roles to manipulate redirection rules."
 msgstr "Tillad roller at ændre på domæne-redelegeringerne."
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:64
-msgid "easyDDB direct links"
+msgid "easyOPAC direct links"
 msgstr "Domæne-redelegeringer"
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.module:65
@@ -67,7 +67,7 @@ msgstr "Redelegeringer bruger til en specifik side"
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
 #, fuzzy
-msgid "easyDDB Direct Link"
+msgid "easyOPAC Direct Link"
 msgstr "Domæne-redelegeringer"
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
@@ -75,5 +75,5 @@ msgid "Redirect user to his profile pages."
 msgstr "Redelegeringer brugere til brugersider vha. domæner."
 
 #: profiles/ding2/modules/easyddb_direct_link/easyddb_direct_link.info:0
-msgid "easyDDB"
+msgid "easyOPAC"
 msgstr ""
