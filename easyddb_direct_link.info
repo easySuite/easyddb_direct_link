@@ -1,7 +1,7 @@
 name = easyOPAC Direct Link
 description = Redirect user to his profile pages.
 core = 7.x
-version = 7.x-3.0.2
+version = 7.x-4.0.2
 package = easyOPAC
 configure = admin/config/people/easyddb/direct
 dependencies[] = features
