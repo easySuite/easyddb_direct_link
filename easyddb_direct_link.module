@@ -81,7 +81,7 @@ function easyddb_direct_link_menu() {
   $menu = array();
 
   $menu['admin/config/people/easyddb_direct'] = array(
-    'title' => 'easyDDB direct links',
+    'title' => 'easyOPAC direct links',
     'description' => 'Configure direct links to user pages.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('easyddb_direct_link_admin_form'),
@@ -107,8 +107,8 @@ function easyddb_direct_link_permission() {
   $perm = array();
 
   $perm['administer easyddb direct'] = array(
-    'title' => t('Administer easyDDB user links settings.'),
-    'desription' => t('Allow roles to manipulate redirection rules.'),
+    'title' => t('Administer easyOPAC user links settings.'),
+    'description' => t('Allow roles to manipulate redirection rules.'),
   );
 
   return $perm;
